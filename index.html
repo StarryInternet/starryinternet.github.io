@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us" class="no-js">
   <head>
     <meta charset="utf-8">
     <title>Starry Open Source</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script>
+      document.documentElement.className = document.documentElement.className.replace('no-js', " ");
+      document.documentElement.className += ' js ';
+    </script>
+
     <meta name="description" content="Starry Open Source" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <meta property="og:url" content="http://starryinternet.github.io" />
     <meta property="og:type" content="website" />
@@ -14,10 +19,11 @@
     <meta property="og:image" content="http://dyajmw2sca9cs.cloudfront.net/oss/og-image.png" />
     <meta property="og:image:secure_url" content="https://dyajmw2sca9cs.cloudfront.net/oss/og-image.png" />
 
-    <link rel="stylesheet" href="src/css/font-awesome.min.css">
-    <link rel="stylesheet" href="src/css/style.css">
-    <link rel="icon" href="https://dyajmw2sca9cs.cloudfront.net/img/favicon16.png" type="image/png" sizes="16x16">
-    <link rel="icon" href="https://dyajmw2sca9cs.cloudfront.net/img/favicon32.png" type="image/png" sizes="32x32">
+    <link href="src/css/font-awesome.min.css" rel="stylesheet">
+    <link href="src/css/style.css" rel="stylesheet">
+
+    <link href="https://dyajmw2sca9cs.cloudfront.net/img/favicon16.png" rel="icon" type="image/png" sizes="16x16">
+    <link href="https://dyajmw2sca9cs.cloudfront.net/img/favicon32.png" rel="icon" type="image/png" sizes="32x32">
 
     <!-- I know, I know. But I actually *want* these to block rendering -->
     <script src="src/js/triangle.js"></script>
@@ -25,35 +31,48 @@
   </head>
   <body>
 
-    <header>
-      <nav class="load-transition">
-        <a href="https://starry.com" class="logo"></a>
-        <a href="https://github.com/StarryInternet" class="github"><i class="fa fa-github fa-2x" ></i></a>
+    <header role="banner">
+      <nav class="load-transition" role="navigation" aria-label="Main">
+        <a href="https://starry.com" class="logo">
+          <span class="sr-only">
+            Starry: visit Starry.com
+          </span>
+        </a>
+        <a href="https://github.com/StarryInternet" class="github">
+          <span class="fa fa-github fa-2x" aria-hidden="true"></span>
+          <span class="sr-only">
+            Starry on GitHub
+          </span>
+        </a>
       </nav>
     </header>
 
-    <main>
+    <main role="main" aria-label="Content">
 
-      <section class="hero">
+      <header class="hero">
         <canvas id="foreground" class="canvas foreground"></canvas>
-        <svg>
-          <symbol id="s-text">
-            <text text-anchor="middle" x="50%" y="50%" class="text--line">Open Source</text>
-          </symbol>
-          <g class="g-ants">
-            <use xlink:href="#s-text" class="text-copy"></use>
-            <use xlink:href="#s-text" class="text-copy"></use>
-            <use xlink:href="#s-text" class="text-copy"></use>
-            <use xlink:href="#s-text" class="text-copy"></use>
-            <use xlink:href="#s-text" class="text-copy"></use>
-          </g>
-        </svg>
-      </section>
+          <h1 class="sr-only heading-fallback">
+            Open Source
+          </h1>
+          <svg role="img" aria-label="Animated Open Source title" class="open-source-svg">
+            <title id="svg_title">Open Source</title>
+            <symbol id="s-text">
+              <text text-anchor="middle" x="50%" y="50%" class="text--line">Open Source</text>
+            </symbol>
+            <g class="g-ants">
+              <use xlink:href="#s-text" class="text-copy"></use>
+              <use xlink:href="#s-text" class="text-copy"></use>
+              <use xlink:href="#s-text" class="text-copy"></use>
+              <use xlink:href="#s-text" class="text-copy"></use>
+              <use xlink:href="#s-text" class="text-copy"></use>
+            </g>
+          </svg>
+      </header>
 
       <section class="text-panel">
         <div class="load-transition">
           <h2>Starry loves Open Source</h2>
-          <h3>We use open source software every day to build incredible things at Starry, so it only seemed fair to contribute some of our own.</h3>
+          <p class="txt-h3">We use open source software every day to build incredible things at Starry, so it only seemed fair to contribute some of our own.</p>
         </div>
       </section>
 
@@ -62,37 +81,53 @@
 
           <h2 class="body-h2">Our Projects</h2>
 
-          <article class="project">
-            <div>
-              <h2><span class="lang">.js</span>missive</h2>
-              <p>Fast, lightweight library for sending JSON over streams.</p>
-              <a class="project-link" href="https://github.com/StarryInternet/missive"><i class="fa fa-github"></i> View Project</i></a>
-            </div>
-          </article>
+            <article class="project">
+              <div>
+                <h3>
+                  <span class="lang" aria-hidden="true">.js</span>
+                  missive
+                </h3>
+                <p>Fast, lightweight library for sending JSON over streams.</p>
+                <a class="project-link" href="https://github.com/StarryInternet/missive"><span aria-hidden="true" class="fa fa-github"></span>
+                View <span class="sr-only">missive</span> Project</a>
+              </div>
+            </article>
 
-          <article class="project">
-            <div>
-              <h2><span class="lang">.js</span>map-memo</h2>
-              <p>Generic JavaScript memoization with Map and WeakMap.</p>
-              <a class="project-link" href="https://github.com/StarryInternet/map-memo"><i class="fa fa-github"></i> View Project</i></a>
-            </div>
-          </article>
+            <article class="project">
+              <div>
+                <h3>
+                  <span class="lang" aria-hidden="true">.js</span>
+                  map-memo
+                </h3>
+                <p>Generic JavaScript memoization with Map and WeakMap.</p>
+                <a class="project-link" href="https://github.com/StarryInternet/map-memo"><span aria-hidden="true" class="fa fa-github"></span>
+                View <span class="sr-only">map-memo</span> Project</a>
+              </div>
+            </article>
 
-          <article class="project">
-            <div>
-              <h2><span class="lang">.js</span>eslint-config-starry</h2>
-              <p>Our ESLint config. IdiomaticJS, plus some ES6 conventions.</p>
-              <a class="project-link" href="https://github.com/StarryInternet/eslint-config-starry"><i class="fa fa-github"></i> View Project</a>
-            </div>
-          </article>
+            <article class="project">
+              <div>
+                <h3>
+                  <span class="lang" aria-hidden="true">.js</span>
+                  eslint-config-starry
+                </h3>
+                <p>Our ESLint config. IdiomaticJS, plus some ES6 conventions.</p>
+                <a class="project-link" href="https://github.com/StarryInternet/eslint-config-starry"><span aria-hidden="true" class="fa fa-github"></span>
+                View <span class="sr-only">eslint-config-starry</span> Project</a>
+              </div>
+            </article>
 
-          <article class="project">
-            <div>
-              <h2><span class="lang">.js</span>eslint-plugin-starry</h2>
-              <p>A few custom ESLint rules for Idiomatic whitespace.</p>
-              <a class="project-link" href="https://github.com/StarryInternet/eslint-plugin-starry"><i class="fa fa-github"></i> View Project</a>
-            </div>
-          </article>
+            <article class="project">
+              <div>
+                <h3>
+                  <span class="lang" aria-hidden="true">.js</span>
+                  eslint-plugin-starry
+                </h3>
+                <p>A few custom ESLint rules for Idiomatic whitespace.</p>
+                <a class="project-link" href="https://github.com/StarryInternet/eslint-plugin-starry"><span aria-hidden="true" class="fa fa-github"></span>
+                View <span class="sr-only">eslint-plugin-starry</span> Project</a>
+              </div>
+            </article>
 
         </div>
       </section>
@@ -101,14 +136,15 @@
         <div class="load-transition">
           <h2>Work at Starry</h2>
 
-          <h3>We love coming up with huge ideas and figuring out ways to bring them to life. Our team spans RF engineering, hardware architecture, firmware, UX, UI, software, industrial design, marketing, branding, and communications. And one thing we all share is an intense desire to make something beautiful. Something that makes a real dent.</h3>
+          <p class="txt-h3">We love coming up with huge ideas and figuring out ways to bring them to life. Our team spans RF engineering, hardware architecture, firmware, UX, UI, software, industrial design, marketing, branding, and communications. And one thing we all share is an intense desire to make something beautiful. Something that makes a real dent.</p>
 
-          <p><a href="https://starry.com/careers">View open positions</a></p>
+          <p>
+            <a href="https://starry.com/careers">View open positions <span class="sr-only">at Starry</span></a>
+          </p>
 
-          <br><br><br><br>
 
           <p class="copyright">
-            © 2016 Starry, Inc.
+            &copy; 2016 Starry, Inc.
             <br>
             <span class="emoji">🤖 🤖 🤖 🤖 🤖</span>
           </p>
