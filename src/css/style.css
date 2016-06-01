@@ -46,6 +46,16 @@ a {
           transition: color 0.3s;
 }
 
+.sr-only {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  pointer-events: none;
+}
+
 .emoji {
   font-family:"Apple Color Emoji","Segoe UI Emoji","NotoColorEmoji","Segoe UI Symbol","Android Emoji","EmojiSymbols";
 }
