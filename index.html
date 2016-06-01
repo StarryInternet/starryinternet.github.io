@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="us-en">
+<html lang="en-us" class="no-js">
   <head>
     <meta charset="utf-8">
     <title>Starry Open Source</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script>
+      document.documentElement.className = document.documentElement.className.replace('no-js', " ");
+      document.documentElement.className += ' js ';
+    </script>
+
     <meta name="description" content="Starry Open Source" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <meta property="og:url" content="http://starryinternet.github.io" />
     <meta property="og:type" content="website" />
@@ -16,6 +21,7 @@
 
     <link href="src/css/font-awesome.min.css" rel="stylesheet">
     <link href="src/css/style.css" rel="stylesheet">
+
     <link href="https://dyajmw2sca9cs.cloudfront.net/img/favicon16.png" rel="icon" type="image/png" sizes="16x16">
     <link href="https://dyajmw2sca9cs.cloudfront.net/img/favicon32.png" rel="icon" type="image/png" sizes="32x32">
 
@@ -36,19 +42,23 @@
 
       <section class="hero">
         <canvas id="foreground" class="canvas foreground"></canvas>
-        <svg>
-          <symbol id="s-text">
-            <text text-anchor="middle" x="50%" y="50%" class="text--line">Open Source</text>
-          </symbol>
-          <g class="g-ants">
-            <use xlink:href="#s-text" class="text-copy"></use>
-            <use xlink:href="#s-text" class="text-copy"></use>
-            <use xlink:href="#s-text" class="text-copy"></use>
-            <use xlink:href="#s-text" class="text-copy"></use>
-            <use xlink:href="#s-text" class="text-copy"></use>
-          </g>
-        </svg>
-      </section>
+          <h1 class="sr-only heading-fallback">
+            Open Source
+          </h1>
+          <svg role="img" aria-label="Animated Open Source title" class="open-source-svg">
+            <title id="svg_title">Open Source</title>
+            <symbol id="s-text">
+              <text text-anchor="middle" x="50%" y="50%" class="text--line">Open Source</text>
+            </symbol>
+            <g class="g-ants">
+              <use xlink:href="#s-text" class="text-copy"></use>
+              <use xlink:href="#s-text" class="text-copy"></use>
+              <use xlink:href="#s-text" class="text-copy"></use>
+              <use xlink:href="#s-text" class="text-copy"></use>
+              <use xlink:href="#s-text" class="text-copy"></use>
+            </g>
+          </svg>
+      </header>
 
       <section class="text-panel">
         <div class="load-transition">

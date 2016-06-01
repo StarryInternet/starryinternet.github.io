@@ -31,6 +31,7 @@ html, body {
   color: #131c4e;
   font-size: 18px;
   font-weight: 300;
+  overflow-x: hidden;
 }
 
 body {
@@ -68,7 +69,7 @@ p, h3 {
   line-height: 1.7em;
 }
 
-.load-transition {
+.js .load-transition {
   opacity: 0;
   -webkit-transform: translateY( 8px );
           transform: translateY( 8px );
@@ -78,7 +79,7 @@ p, h3 {
           transition-delay: 0.25s;
 }
 
-body.active .load-transition {
+.js body.active .load-transition {
   opacity: 1;
   -webkit-transform: translateY( 0px );
           transform: translateY( 0px );
@@ -370,5 +371,39 @@ body.active .text-copy:nth-child( 5 ) {
   }
   .text--line {
     font-size: 46px;
+  }
+}
+
+
+/* no-js fallbacks */
+.no-js .open-source-svg {
+  display: none;
+}
+
+.no-js .sr-only.heading-fallback {
+  clip: inherit;
+  color: #fff;
+  font-size: 46px;
+  height: auto;
+  left: 0;
+  opacity: 1;
+  overflow: visible;
+  right: 0;
+  text-align: center;
+  top: 40%;
+  width: auto;
+}
+
+@media screen and ( min-width: 581px )  {
+  .no-js .sr-only.heading-fallback {
+    font-size: 64px;
+    top: 46%;
+  }
+}
+
+@media screen and ( min-width: 780px ) {
+  .no-js .sr-only.heading-fallback {
+    font-size: 84px;
+    top: 48%;
   }
 }
