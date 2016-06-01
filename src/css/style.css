@@ -61,12 +61,17 @@ a {
   font-family:"Apple Color Emoji","Segoe UI Emoji","NotoColorEmoji","Segoe UI Symbol","Android Emoji","EmojiSymbols";
 }
 
-a:hover {
+a:hover,
+a:focus {
   color: #131c4e;
 }
 
 p, h3 {
   line-height: 1.7em;
+}
+
+.txt-h3 {
+  font-size: 21px;
 }
 
 .js .load-transition {
@@ -85,7 +90,7 @@ p, h3 {
           transform: translateY( 0px );
 }
 
-header {
+header[role="banner"] {
   background: rgba( 255, 255, 255, 0.9 );
   width: 100%;
   height: 80px;
@@ -288,7 +293,8 @@ body.active .text-copy:nth-child( 5 ) {
   box-shadow: 0 0 8px rgba( 60,77 ,119, 0.25 );
 }
 
-.project h2 {
+.project h3 {
+  font-size: 27px;
   margin: 0;
 }
 
