@@ -109,7 +109,7 @@ function app() {
     var timer;
     return function() {
       clearTimeout( timer );
-      setTimeout( reset, 100 );
+      timer = setTimeout( reset, 100 );
     };
   }()));
 }
