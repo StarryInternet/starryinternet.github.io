@@ -321,6 +321,13 @@ body.active .text-copy:nth-child( 5 ) {
   background-image: url('../img/swift.png');
 }
 
+.project .lang.cpp {
+  background-image: url('../img/cpp.png');
+  position: relative;
+  top: 3px;
+  left: 2px;
+}
+
 .copyright {
   font-size: 16px;
   line-height: 32px;
